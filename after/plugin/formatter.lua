@@ -13,32 +13,32 @@ require("formatter").setup({
 		-- and will be executed in order
 
 		javascript = {
-            require("formatter.filetypes.javascript").prettier
-        },
+			require("formatter.filetypes.javascript").prettier,
+		},
 		javascriptreact = {
-            require("formatter.filetypes.javascriptreact").prettier
-        },
+			require("formatter.filetypes.javascriptreact").prettier,
+		},
 		typescript = {
-            require("formatter.filetypes.typescript").prettier
-        },
+			require("formatter.filetypes.typescript").prettier,
+		},
 		typescriptreact = {
-            require("formatter.filetypes.typescriptreact").prettier
-        },
+			require("formatter.filetypes.typescriptreact").prettier,
+		},
 		php = {
-            require("formatter.filetypes.php").php_cs_fixer
-        },
+			require("formatter.filetypes.php").php_cs_fixer,
+		},
 		css = {
-            function()
-                return {
+			function()
+				return {
 					exe = "prettier",
 					args = {
 						"--stdin-filepath",
 						util.escape_path(util.get_current_buffer_file_path()),
 					},
 					stdin = true,
-                }
-            end
-        },
+				}
+			end,
+		},
 		lua = {
 			-- "formatter.filetypes.lua" defines default configurations for the
 			-- "lua" filetype
