@@ -23,18 +23,6 @@ return require("packer").startup(function(use)
 	})
 
 	use({
-		"folke/trouble.nvim",
-		config = function()
-			require("trouble").setup({
-				icons = false,
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
-	})
-
-	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
@@ -42,10 +30,8 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("theprimeagen/harpoon")
-	use("theprimeagen/refactoring.nvim")
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
-	use("nvim-treesitter/nvim-treesitter-context")
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v1.x",
@@ -70,8 +56,8 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	use("folke/zen-mode.nvim")
-	use("laytan/cloak.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 	use({ "mhartington/formatter.nvim" })
+	use 'm4xshen/autoclose.nvim'
+	use 'windwp/nvim-ts-autotag'
 end)
