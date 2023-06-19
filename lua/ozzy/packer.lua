@@ -57,7 +57,5 @@ return require("packer").startup(function(use)
 	})
 
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
-	use({ "mhartington/formatter.nvim" })
 	use 'm4xshen/autoclose.nvim'
-	use 'windwp/nvim-ts-autotag'
 end)
